@@ -3,7 +3,7 @@ import set from 'lodash/fp/set'
 function mergeWithMultiplePaths(obj: any, config: { [key: string]: any }) {
   return Object.entries(config).reduce((a, [key, value]) => {
     return set(key, value, a)
-  }, {})
+  }, obj)
 }
 
 const ori = {
